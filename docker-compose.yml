@@ -20,7 +20,8 @@ x-n8n: &service-n8n
     - N8N_ENCRYPTION_KEY
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - OLLAMA_HOST=${OLLAMA_HOST:-ollama:11434}
-    - N8N_HOST=https://reload-ready-citysearch-regulatory.trycloudflare.com
+    - N8N_HOST=reload-ready-citysearch-regulatory.trycloudflare.com
+    - N8N_PROTOCOL=https
     - N8N_EDITOR_BASE_URL=https://reload-ready-citysearch-regulatory.trycloudflare.com
     - WEBHOOK_URL=https://reload-ready-citysearch-regulatory.trycloudflare.com
   env_file:
