@@ -149,3 +149,12 @@ services:
     image: ollama/ollama:rocm
     depends_on:
      - ollama-gpu-amd
+     
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    networks: ['demo']
+    restart: unless-stopped
+    command: tunnel --url http://n8n:5678
+    depends_on:
+      - n8n
